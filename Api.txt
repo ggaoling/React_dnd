@@ -1,66 +1,66 @@
 React-dnd apis:
 
-DragSource(type,spec,collect) °ü×°ĞèÒªÍÏ¶¯µÄ×é¼ş 
-DropTarget(type,spec,collect) °ü×°½ÓÊÕÍÏ×§ÔªËØµÄ×é¼ş 
-DragDropContext °ü×°ÍÏ×§¸ù×é¼ş£¬°ü¹üDragSource & DropTarget
+DragSource(type,spec,collect) åŒ…è£…éœ€è¦æ‹–åŠ¨çš„ç»„ä»¶ 
+DropTarget(type,spec,collect) åŒ…è£…æ¥æ”¶æ‹–æ‹½å…ƒç´ çš„ç»„ä»¶ 
+DragDropContext åŒ…è£…æ‹–æ‹½æ ¹ç»„ä»¶ï¼ŒåŒ…è£¹DragSource & DropTarget
 
-²ÎÊıËµÃ÷£º£¨source×é¼şÎªDragSource°ü×°µÄ×é¼ş£¬target×é¼şÎªDropTarget°ü×°µÄ×é¼ş£© 
-No.1 type ÍÏ×§ÀàĞÍ ±ØÌî 
+å‚æ•°è¯´æ˜ï¼šï¼ˆsourceç»„ä»¶ä¸ºDragSourceåŒ…è£…çš„ç»„ä»¶ï¼Œtargetç»„ä»¶ä¸ºDropTargetåŒ…è£…çš„ç»„ä»¶ï¼‰ 
+No.1 type æ‹–æ‹½ç±»å‹ å¿…å¡« 
 string| symbol 
-µ±source×é¼şµÄtypeºÍtarget×é¼şµÄtypeÒ»ÖÂ£¬target×é¼ş¿ÉÒÔ½ÓÊÕsource×é¼ş
+å½“sourceç»„ä»¶çš„typeå’Œtargetç»„ä»¶çš„typeä¸€è‡´ï¼Œtargetç»„ä»¶å¯ä»¥æ¥æ”¶sourceç»„ä»¶
 
-No.2 spec ÍÏ×§ÊÂ¼şµÄ·½·¨¶ÔÏó ±ØÌî 
+No.2 spec æ‹–æ‹½äº‹ä»¶çš„æ–¹æ³•å¯¹è±¡ å¿…å¡« 
 - DragSource specObj 
-beginDrag(props,monitor,component):ÍÏ¶¯¿ªÊ¼Ê±´¥·¢µÄÊÂ¼ş£¬±ØĞë¡£·µ»Ø¸úpropsÏà¹ØµÄ¶ÔÏó¡£ 
-endDrag(props, monitor, component): ÍÏ¶¯½áÊøÊ±´¥·¢µÄÊÂ¼ş£¬¿ÉÑ¡¡£ 
-canDrag(props, monitor): µ±Ç°ÊÇ·ñ¿ÉÒÔÍÏ×§µÄÊÂ¼ş£¬¿ÉÑ¡¡£ 
-isDragging(props, monitor): ÍÏ×§Ê±´¥·¢µÄÊÂ¼ş£¬¿ÉÑ¡¡£ 
+   beginDrag(props,monitor,component):æ‹–åŠ¨å¼€å§‹æ—¶è§¦å‘çš„äº‹ä»¶ï¼Œå¿…é¡»ã€‚è¿”å›è·Ÿpropsç›¸å…³çš„å¯¹è±¡ã€‚ 
+   endDrag(props, monitor, component): æ‹–åŠ¨ç»“æŸæ—¶è§¦å‘çš„äº‹ä»¶ï¼Œå¯é€‰ã€‚ 
+   canDrag(props, monitor): å½“å‰æ˜¯å¦å¯ä»¥æ‹–æ‹½çš„äº‹ä»¶ï¼Œå¯é€‰ã€‚ 
+   isDragging(props, monitor): æ‹–æ‹½æ—¶è§¦å‘çš„äº‹ä»¶ï¼Œå¯é€‰ã€‚ 
 - DropTarget specObj 
-drop(props, monitor, component) ×é¼ş·ÅÏÂÊ±´¥·¢µÄÊÂ¼ş£¬¿ÉÑ¡¡£ 
-hover(props, monitor, component) ×é¼şÔÚDropTargetÉÏ·½Ê±ÏìÓ¦µÄÊÂ¼ş£¬¿ÉÑ¡¡£ 
-canDrop(props, monitor) ×é¼ş¿ÉÒÔ±»·ÅÖÃÊ±´¥·¢µÄÊÂ¼ş£¬¿ÉÑ¡¡£ 
-ÆäÖĞ£¬props:µ±Ç°×é¼şµÄprops 
-monitor:²éÑ¯µ±Ç°µÄÍÏ×§×´Ì¬ 
-component£ºµ±Ç°×é¼şÊµÀı
+   drop(props, monitor, component) ç»„ä»¶æ”¾ä¸‹æ—¶è§¦å‘çš„äº‹ä»¶ï¼Œå¯é€‰ã€‚ 
+   hover(props, monitor, component) ç»„ä»¶åœ¨DropTargetä¸Šæ–¹æ—¶å“åº”çš„äº‹ä»¶ï¼Œå¯é€‰ã€‚ 
+   canDrop(props, monitor) ç»„ä»¶å¯ä»¥è¢«æ”¾ç½®æ—¶è§¦å‘çš„äº‹ä»¶ï¼Œå¯é€‰ã€‚ 
+   å…¶ä¸­ï¼Œprops:å½“å‰ç»„ä»¶çš„props 
+   monitor:æŸ¥è¯¢å½“å‰çš„æ‹–æ‹½çŠ¶æ€ 
+   componentï¼šå½“å‰ç»„ä»¶å®ä¾‹
 
-No.3 collect Ò»¸öº¯Êı£¬°ÑÍÏ×§¹ı³ÌÖĞĞèÒªµÄĞÅÏ¢×¢Èë×é¼şµÄprops£¬½ÓÊÜÁ½¸ö²ÎÊı connect & monitor ±ØÌî
+No.3 collect ä¸€ä¸ªå‡½æ•°ï¼ŒæŠŠæ‹–æ‹½è¿‡ç¨‹ä¸­éœ€è¦çš„ä¿¡æ¯æ³¨å…¥ç»„ä»¶çš„propsï¼Œæ¥å—ä¸¤ä¸ªå‚æ•° connect & monitor å¿…å¡«
 
-²ÎÊıconnect 
-- source×é¼ş 
-collectÖĞµÄconnectÊÇDragSourceConnectorµÄÊµÀı£¬ÄÚÖÃÁ½¸ö·½·¨ dragSource() & dragPreview() 
-dragSource()·µ»ØÒ»¸ö·½·¨£¬½«source×é¼ş´«Èë¸Ä·½·¨£¬¿ÉÒÔ½«source DOMºÍ React Dnd backend Á¬½ÓÆğÀ´ 
-dragPreview()·µ»ØÒ»¸ö·½·¨£¬¿ÉÒÔ´«Èë½Úµã£¬×÷ÎªÍÏ×§Ô¤ÀÀÊ±µÄ½ÇÉ«
+å‚æ•°connect 
+- sourceç»„ä»¶ 
+   collectä¸­çš„connectæ˜¯DragSourceConnectorçš„å®ä¾‹ï¼Œå†…ç½®ä¸¤ä¸ªæ–¹æ³• dragSource() & dragPreview() 
+   dragSource()è¿”å›ä¸€ä¸ªæ–¹æ³•ï¼Œå°†sourceç»„ä»¶ä¼ å…¥æ”¹æ–¹æ³•ï¼Œå¯ä»¥å°†source DOMå’Œ React Dnd backend è¿æ¥èµ·æ¥ 
+   dragPreview()è¿”å›ä¸€ä¸ªæ–¹æ³•ï¼Œå¯ä»¥ä¼ å…¥èŠ‚ç‚¹ï¼Œä½œä¸ºæ‹–æ‹½é¢„è§ˆæ—¶çš„è§’è‰²
 
--target×é¼ş 
-collectÖĞµÄconnectÊÇDropTargetConnectorµÄÊµÀı£¬ÄÚÖÃÁ½¸ö·½·¨ dropTarget() & dragSource() ·µ»Ø¿ÉÒÔ½«drop target ºÍReact DnD backendÁ¬½ÓÆğÀ´µÄ·½·¨
+-targetç»„ä»¶ 
+   collectä¸­çš„connectæ˜¯DropTargetConnectorçš„å®ä¾‹ï¼Œå†…ç½®ä¸¤ä¸ªæ–¹æ³• dropTarget() & dragSource() è¿”å›å¯ä»¥å°†drop target å’ŒReact DnD backendè¿æ¥èµ·æ¥çš„æ–¹æ³•
 
-²ÎÊı monitor 
--source×é¼ş 
-collectÖĞmonitorÊÇDragSourceMonitorµÄÊµÀı 
-ÄÚÖÃ·½·¨ÁĞ±í£º 
-monitor.canDrag() // ÊÇ·ñÄÜ±»ÍÏ×§ 
-monitor.isDragging() // ÊÇ·ñÕıÔÚÍÏ×§ 
-monitor.getItemType() // ÍÏ×§×é¼ştype 
-monitor.getItem() // µ±Ç°ÍÏ×§µÄitem 
-monitor.getDropResult() // ²éÑ¯drop½á¹û 
-monitor.didDrop() // sourceÊÇ·ñÒÑ¾­dropÔÚtarget 
-monitor.getInitialClientOffset() // ÍÏ×§×é¼ş³õÊ¼ÍÏ×§Ê±offset 
-monitor.getInitialSourceClientOffset() 
-monitor.getClientOffset() // ÍÏ×§×é¼şµ±Ç°offset 
-monitor.getDifferenceFromInitialOffset() //µ±Ç°ÍÏ×§offsetºÍ³õÊ¼ÍÏ×§offsetµÄ²î±ğ 
-monitor.getSourceClientOffset()
+å‚æ•° monitor 
+-sourceç»„ä»¶ 
+  collectä¸­monitoræ˜¯DragSourceMonitorçš„å®ä¾‹ 
+  å†…ç½®æ–¹æ³•åˆ—è¡¨ï¼š 
+  monitor.canDrag() // æ˜¯å¦èƒ½è¢«æ‹–æ‹½ 
+  monitor.isDragging() // æ˜¯å¦æ­£åœ¨æ‹–æ‹½ 
+  monitor.getItemType() // æ‹–æ‹½ç»„ä»¶type 
+  monitor.getItem() // å½“å‰æ‹–æ‹½çš„item 
+  monitor.getDropResult() // æŸ¥è¯¢dropç»“æœ 
+  monitor.didDrop() // sourceæ˜¯å¦å·²ç»dropåœ¨target 
+  monitor.getInitialClientOffset() // æ‹–æ‹½ç»„ä»¶åˆå§‹æ‹–æ‹½æ—¶offset 
+  monitor.getInitialSourceClientOffset() 
+  monitor.getClientOffset() // æ‹–æ‹½ç»„ä»¶å½“å‰offset 
+  monitor.getDifferenceFromInitialOffset() //å½“å‰æ‹–æ‹½offsetå’Œåˆå§‹æ‹–æ‹½offsetçš„å·®åˆ« 
+  monitor.getSourceClientOffset()
 
--target×é¼ş 
-collectÖĞmonitorÊÇDropTargetMonitorµÄÊµÀı 
-ÄÚÖÃ·½·¨ÁĞ±í£º 
-monitor.canDrop() // ÊÇ·ñ¿É±»·ÅÖÃ 
-monitor.isOver(options) // sourceÊÇ·ñÔÚtargetÉÏ·½ 
-monitor.getItemType() // ÍÏ×§×é¼ştype 
-monitor.getItem() // µ±Ç°ÍÏ×§µÄitem 
-monitor.getDropResult() // ²éÑ¯drop½á¹û 
-monitor.didDrop() // sourceÊÇ·ñÒÑ¾­dropÔÚtarget 
-monitor.getInitialClientOffset() // ÍÏ×§×é¼ş³õÊ¼ÍÏ×§Ê±offset 
-monitor.getInitialSourceClientOffset() 
-monitor.getClientOffset() // ÍÏ×§×é¼şµ±Ç°offset 
-monitor.getDifferenceFromInitialOffset() // µ±Ç°ÍÏ×§offsetºÍ³õÊ¼ÍÏ×§offsetµÄ²î±ğ 
-monitor.getSourceClientOffset()
+-targetç»„ä»¶ 
+  collectä¸­monitoræ˜¯DropTargetMonitorçš„å®ä¾‹ 
+  å†…ç½®æ–¹æ³•åˆ—è¡¨ï¼š 
+  monitor.canDrop() // æ˜¯å¦å¯è¢«æ”¾ç½® 
+  monitor.isOver(options) // sourceæ˜¯å¦åœ¨targetä¸Šæ–¹ 
+  monitor.getItemType() // æ‹–æ‹½ç»„ä»¶type 
+  monitor.getItem() // å½“å‰æ‹–æ‹½çš„item 
+  monitor.getDropResult() // æŸ¥è¯¢dropç»“æœ 
+  monitor.didDrop() // sourceæ˜¯å¦å·²ç»dropåœ¨target 
+  monitor.getInitialClientOffset() // æ‹–æ‹½ç»„ä»¶åˆå§‹æ‹–æ‹½æ—¶offset 
+  monitor.getInitialSourceClientOffset() 
+  monitor.getClientOffset() // æ‹–æ‹½ç»„ä»¶å½“å‰offset 
+  monitor.getDifferenceFromInitialOffset() // å½“å‰æ‹–æ‹½offsetå’Œåˆå§‹æ‹–æ‹½offsetçš„å·®åˆ« 
+  monitor.getSourceClientOffset()
