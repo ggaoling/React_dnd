@@ -64,3 +64,5 @@ No.3 collect 一个函数，把拖拽过程中需要的信息注入组件的prop
   monitor.getClientOffset() // 拖拽组件当前offset 
   monitor.getDifferenceFromInitialOffset() // 当前拖拽offset和初始拖拽offset的差别 
   monitor.getSourceClientOffset()
+
+
