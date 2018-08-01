@@ -15,8 +15,9 @@ function dragDirection(
 ) {
     const hoverMiddleY = (initialClientOffset.y - sourceClientOffset.y) / 2;
     const hoverClientY = clientOffset.y - sourceClientOffset.y;
+    console.log('hoverMiddleY: ',hoverMiddleY,'hoverClientY: ',hoverClientY);
     if (dragIndex < hoverIndex && hoverClientY > hoverMiddleY) {
-        return 'downward';
+        return 'downward';    
     }
     if (dragIndex > hoverIndex && hoverClientY < hoverMiddleY) {
         return 'upward';
@@ -37,7 +38,8 @@ class BodyRow extends Component {
             ...restProps
         } = this.props;
         const style = { ...restProps.style, cursor: 'move' };
-
+        console.log('sourceClientOffset: ',sourceClientOffset,'initialClientOffset: ',initialClientOffset,'clientOffset: ',clientOffset);
+        
         let className = restProps.className;
         if (isOver && initialClientOffset) {
             const direction = dragDirection(
