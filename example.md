@@ -90,10 +90,11 @@ class Card {
 }
 
 export default DragSource(Types.CARD, cardSource, collect)(Card);
+```
+
+## DropTarget
 ```javascript
 //Target.js
-## DropTarget
-```
 import { DropTarget } from 'react-dnd';
 
 class MyComponent {
@@ -104,7 +105,7 @@ export default DropTarget(types, spec, collect)(MyComponent);
 仿照DragSource写法
 ```
 ## DragDropContext
-```
+```javascript
 import HTML5Backend from 'react-dnd-html5-backend'
 import { DragDropContext } from 'react-dnd'
 import Source from './Source.js'
