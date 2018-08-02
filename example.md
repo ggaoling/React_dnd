@@ -1,6 +1,6 @@
 # Examples of Top-Level API
 ## DragSource
-```
+```javascript
 //Source.js
 import React from 'react';
 import { DragSource } from 'react-dnd';
@@ -90,7 +90,7 @@ class Card {
 }
 
 export default DragSource(Types.CARD, cardSource, collect)(Card);
-```
+```javascript
 //Target.js
 ## DropTarget
 ```
@@ -122,7 +122,7 @@ class YourApp {
 export default DragDropContext(HTML5Backend)(YourApp)
 ```
 ## DragDropContextProvider (As an alternative to the DragDropContext)
-```
+```javascript
 import HTML5Backend from 'react-dnd-html5-backend'
 import { DragDropContextProvider } from 'react-dnd'
 
