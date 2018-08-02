@@ -1,13 +1,16 @@
 # React-dnd
 ## React-dnd apis:
+```
 * DragSource(type,spec,collect) 包装需要拖动的组件 
 * DropTarget(type,spec,collect) 包装接收拖拽元素的组件 
 * DragDropContext 包装拖拽根组件，包裹DragSource & DropTarget
-## 参数说明：（source组件为DragSource包装的组件，target组件为DropTarget包装的组件） 
+参数说明：（source组件为DragSource包装的组件，target组件为DropTarget包装的组件） 
+```
 ### 1. type 拖拽类型 必填 
+```
 string| symbol 
 当source组件的type和target组件的type一致，target组件可以接收source组件
-
+```
 ### 2. spec 拖拽事件的方法对象 必填 
 - DragSource specObj 
 ```
@@ -40,9 +43,9 @@ collect中的connect是DropTargetConnector的实例，内置两个方法 dropTar
 ```
 #### 参数 monitor 
 -source组件 
-collect中monitor是DragSourceMonitor的实例 
- 内置方法列表： 
+collect中monitor是DragSourceMonitor的实例  
 ```
+ 内置方法列表：
 monitor.canDrag() // 是否能被拖拽 
 monitor.isDragging() // 是否正在拖拽 
 monitor.getItemType() // 拖拽组件type 
@@ -57,8 +60,8 @@ monitor.getSourceClientOffset()
 ```
 -target组件 
 collect中monitor是DropTargetMonitor的实例 
- 内置方法列表： 
 ```
+ 内置方法列表：
 monitor.canDrop() // 是否可被放置 
 monitor.isOver(options) // source是否在target上方 
 monitor.getItemType() // 拖拽组件type 
@@ -71,3 +74,4 @@ monitor.getClientOffset() // 拖拽组件当前offset
 monitor.getDifferenceFromInitialOffset() // 当前拖拽offset和初始拖拽offset的差别 
 monitor.getSourceClientOffset()
 ```
+:sparkles: :sparkles:
