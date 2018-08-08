@@ -7,11 +7,11 @@ import { DragDropContext } from "react-dnd";
 class Container extends Component {
   render() {
     return (
-      <div style={{position:'absolute',margin:'auto'}}>
-        <div style={{ overflow: "hidden", clear: "both"}}>
+      <div style={{margin:'0 auto'}}>
+        <div>
           <Dustbin />
         </div>
-        <div style={{ overflow: "hidden", clear: "both" }}>
+        <div style={{clear: "both" }}>
           <Box id="1" name="Glass" />
           <Box id="2" name="banana" />
           <Box od="3" name="paper" />

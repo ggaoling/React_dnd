@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "antd": "^3.7.3",
+    "antd": "^3.8.0",
     "quant-ui": "^0.1.981",
     "react": "^16.4.1",
     "react-dnd-html5-backend": "^5.0.1",
